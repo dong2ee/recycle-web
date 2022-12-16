@@ -13,6 +13,12 @@ WORKDIR /home/python
 RUN apt-get update -y
 RUN apt-get install -y libgl1-mesa-glx
 RUN apt-get install -y libglib2.0-0 libsm6 libxrender1 libxext6
+RUN \
+  apt-get update && \
+  apt-get install -y sudo curl git && \
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && \
+  sudo apt-get install git-lfs=1.0.0 && \
+  mkdir -p /src 
 
 COPY --chown=python:python requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
