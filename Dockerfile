@@ -13,6 +13,9 @@ WORKDIR /home/python
 RUN apt-get update -y
 RUN apt-get install -y libgl1-mesa-glx
 RUN apt-get install -y libglib2.0-0 libsm6 libxrender1 libxext6
+RUN apt install git-lfs
+RUN git clone "https://github.com/dong2ee/recycle-web.git"
+RUN git lfs pull
 
 COPY --chown=python:python requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
