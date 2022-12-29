@@ -47,3 +47,6 @@ def predict():
         return render_template('result.html',result_image = filename,model_name = model_name)
 
     return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run()
