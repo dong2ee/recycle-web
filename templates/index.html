@@ -28,21 +28,8 @@
   <form class="form-signin card mb-6" method=post enctype=multipart/form-data>
     <img class="mb-4" src="https://post-phinf.pstatic.net/MjAyMDA0MDdfMjg5/MDAxNTg2MjQ4NDk5NzEy.LLngtNLJtGeY3pUhDVFciMOpN8YGpQHT39NmNFyzto8g.XCLKhKZ1mZ7faRc1pOrY5hGxQQ0qQarVDI1zPJGifn4g.JPEG/%EC%9E%AC%ED%99%9C%EC%9A%A9.jpg?type=w1200" alt="recycleimage" width="120"
       style="border-radius:50%">
-    <h2 class="h3 mb-3 font-weight-normal">Upload Any Images</h2>
-   
-   <!-- Addition -->
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Select the model type</label>
-      <select class="form-control" id="exampleFormControlSelect1" name="model_name">
-        {% for model_name in model_names -%}
-        <option name="{{model_name}}">{{model_name}}</option>
-        {% endfor %}
-      </select>
-    </div>
-    <!-- Addition end -->
-    <!--<label for="inputfile"> Click here to upload image </label>-->
-    <input type="file" name="file" id="inputfile">
-
+    <h1 class="h3 mb-3 font-weight-normal">Upload Any Images</h1>
+    <input type="file" name="file" class="form-control-file" id="inputfile">
     <br />
     <button>
       <span class="box">
